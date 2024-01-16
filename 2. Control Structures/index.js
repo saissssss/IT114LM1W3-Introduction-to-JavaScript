@@ -72,21 +72,23 @@ list.forEach((x) => {
   console.log(x);
 });
 // Checkpoint 2.2 When should you use for of, for in, or .forEach loops? Try researching the answer
-// Answer:
+// Answer: Use `for...of` with iterable objects, `for...in` with object properties, and `.forEach()` with arrays for iteration in JavaScript.
 
 // TODO 2.10 Use the try and catch block to catch division by zero errors in the code below.
 // In the finally block, simulate cleaning up resources by displaying "cleaning up resources"
 try {
   const numerator = Math.floor(Math.random() * 100 + 1);
-  const denominator = Math.floor(Math.random() * 5); // feel free to mock this value for testing
-  console.log(numerator / denominator);
+  const denominator = 0; // feel free to mock this value for testing
+  if (denominator === 0) {
+    throw new Error("Division by zero error");
+  } else {
+    console.log(numerator / denominator);
+  }
+} catch (e) {
+  console.log(e.message);
+} finally {
+  console.log("cleaning up resources");
 }
 
-const numerator = Math.floor(Math.random() * 100 + 1);
-const denominator = Math.floor(Math.random() * 5); // feel free to mock this value for testing
-
-if (denominator === 0) {
-  throw new Error("Division by zero error");
-} else {
-  console.log(numerator / denominator);
-}
+// const numerator = Math.floor(Math.random() * 100 + 1);
+// const denominator = Math.floor(Math.random() * 5); // feel free to mock this value for testing
