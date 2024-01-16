@@ -28,4 +28,4 @@ console.log(fourletters);
 // Your code here
 //const combined = words.reduce()
 // Checkpoint 5.1 Summarize what map, filter, and reduce do
-// Answer: 
+// Answer: `map` transforms each element of an array, `filter` selects elements based on a condition, and `reduce` accumulates array values into a single result.
